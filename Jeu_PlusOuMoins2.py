@@ -7,7 +7,6 @@ entre = Entry(fenetre, textvariable=str)
 bouton = Button(fenetre, text="Jouer")
 
 
-
 label.pack()
 entre.pack()
 bouton.pack()
