@@ -1,23 +1,15 @@
 from random import *
 from tkinter import *
 
-fenetre = Tk()
-label = Label(fenetre, text="Jusqu'a quel nombre voulez vous jouez?")
-entre = Entry(fenetre, textvariable=str)
-bouton = Button(fenetre, text="Jouer")
-
-
-label.pack()
-entre.pack()
-bouton.pack()
-fenetre.mainloop()
-
-
+def prendre():
+    return reponse.get()
 
 def jeu():
     play=0
+    n = int(entre.get())
     while play!=1:
-        n=int(input("Jusqu'a quel nombre voulez vous jouez?"))
+        jeu = Tk()
+        jeu.mainloop()
         nombre_aleatoire=randint(1,n)
         c=0
         s=0
@@ -34,4 +26,18 @@ def jeu():
     print("Merci d'avoir joué.")
 
 
-##jeu()
+
+
+fenetre = Tk()
+label = Label(fenetre, text="Jusqu'a quel nombre voulez vous jouer?")
+entre = Entry(fenetre, textvariable=int)
+bouton = Button(fenetre, text="Jouer",command = jeu)
+
+
+label.pack()
+entre.pack()
+bouton.pack()
+fenetre.mainloop()
+
+
+
