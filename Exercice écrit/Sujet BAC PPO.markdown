@@ -55,3 +55,13 @@ def energie_reelle(self,masse):
     return masse * self.energie / 100
 ```
 ## Q3
+### (a)
+```python
+nutrition["lait"].energie
+```
+### (b)
+```python
+nutrition["lait"].energie_reelle(220)
+```
+
+## Q4
