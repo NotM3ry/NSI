@@ -1,12 +1,11 @@
 from random import *
 from tkinter import *
 
-def prendre():
-    return reponse.get()
+def prendre(choix):
+    return choix.get()
+
 
 def jeu():
-    n = int(entre.get())
-    v=randint(1,n)
     jeu = Tk()
     consigne = Label(jeu, text='Choisir un nombre :')
     reponse = Entry(jeu, textvariable=int)
@@ -15,10 +14,12 @@ def jeu():
     reponse.pack()
     valide.pack()
     jeu.mainloop()
-    return v
-        
 
-def test(v):
+
+
+def test():
+    n = prendre(reponse)
+    v=randint(1,n)
     c=0
     s=0     
     window = Tk()
