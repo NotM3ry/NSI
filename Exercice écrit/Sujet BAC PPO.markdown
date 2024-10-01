@@ -71,3 +71,8 @@ def energie_totale_reelle(nutrition, recette):
     for a,m in recette.items():
         energie_totale += nutrition[a].energie_reelle(m)
 ```
+
+# Exercice 3
+## Partie 1
+## Q1
+### (a)
