@@ -35,3 +35,23 @@ def regleB(chaine):
     if n>=2:
         return chaine[0] == "b" and chaine[n-1] == "b" and (regleA(raccourcir(chaine)) or regleB(raccourcir(chaine)))
 ```
+# Exercice 2
+## Q1
+### (a)
+```python
+lait = Aliment(65.1, 3.32, 4.85, 3.63)
+```
+### (b)
+```python
+lait.energie
+```
+### (c)
+```python
+lait.proteines = 3.4
+```
+## Q2
+```python
+def energie_reelle(self,masse):
+    return masse * self.energie / 100
+```
+## Q3
