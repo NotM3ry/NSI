@@ -65,3 +65,9 @@ nutrition["lait"].energie_reelle(220)
 ```
 
 ## Q4
+```python
+def energie_totale_reelle(nutrition, recette):
+    energir_totale = 0
+    for a,m in recette.items():
+        energie_totale += nutrition[a].energie_reelle(m)
+```
