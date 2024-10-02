@@ -14,18 +14,19 @@ def jeu():
     reponse.pack()
     valide.pack()
     jeu.mainloop()
-
-
-
-def test():
     n = prendre(reponse)
+    return n
+
+
+
+def test(jeu):
     v=randint(1,n)
     c=0
     s=0     
     window = Tk()
     while s!=v:
         c+=1
-        s=int(reponse.get())
+        s=int(prendre(reponse))
         if s<v:
             texte = Label(window, text='Le nombre est plus grand')
         elif s>v:
@@ -33,7 +34,7 @@ def test():
         else:
             texte = Label(window, text='Bien joué!')
         
-        tk.mainloop()
+        window.mainloop()
     play=int(input("Taper 1 pour arrêter et taper 0 pour rejouer."))
     print("Merci d'avoir joué.")
 
