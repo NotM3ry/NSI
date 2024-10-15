@@ -71,6 +71,29 @@ def solutions_possbiles(score):
             solution.append(score)
         if solution != []:
             resultat.append(solution)
-    return resultat
-            
+    return resultat        
+```
+
+# Exercice 2
+## Partie B
+### 1. 
+- Un attribut est ```self.itineraire``` 
+- Une méthode est ```remplir_grille```
+
+### 2.
+a = 4  
+b = 7
+
+### 3.
+```python
+def remplir_grille(self):
+    i, j = 0, 0
+    self.grille[0][0] = 'S'
+    for direction in self.itineraire:
+        if direction == 'D':
+            j += 1
+        elif direction == 'B':
+            i += 1
+        self.grille[i][j] = '.'
+    self.grille[self.largeur][self.longueur] = 'E'
 ```
