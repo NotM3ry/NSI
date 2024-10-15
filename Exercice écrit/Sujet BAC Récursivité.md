@@ -42,9 +42,35 @@ f(10)   = f(7) + f(5) + f(3) = 1 + 1 + 1 = 3
 def nb_solutions(score):
     if score == 0 or score == 3 or score == 6:
         return 1
-    elif score == 1 or score == 2 or score == 4 or score == 5:
+    if score == 1 or score == 2 or score == 4 or score == 5:
         return 0
-    else:
-        return nb_solutions(score - 7) + nb_solutions(score - 5) + nb_solutions(score - 3)
+    return nb_solutions(score - 7) + nb_solutions(score - 5) + nb_solutions(score - 3)
 
+```
+### 6.
+Voir plus tard !
+
+### 7.
+- A partir de la ligne 8 
+- A partir de la ligne 6
+On pourrait avoir la ligne 4 mais il est impossible d'avoir un score de 4.
+
+### 8.
+```python
+def solutions_possbiles(score):
+    if score < 0:
+        resultat = []
+    elif score == 0:
+        resultat = [[0]]
+    else:
+        resultat = []
+    for coup in [3, 5, 7]:
+        liste = solutions_possibles(score - coup)
+        solution = []
+        for solution in liste:
+            solution.append(score)
+        if solution != []:
+            resultat.append(solution)
+    return resultat
+            
 ```
